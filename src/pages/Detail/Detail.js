@@ -14,10 +14,11 @@ import useFetchdetail from '../../hooks/useFetchdetail';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
+import API_URL from '../../config/ConfigDetail';
+
 const Detail = ({route}) => {
   const {idMeal} = route.params;
-  console.log(idMeal);
-  const API_URL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i';
+  // console.log(idMeal);
   const {loading, error, data} = useFetchdetail(`${API_URL}=${idMeal}`);
 
   const onYoutube = () =>

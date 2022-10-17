@@ -5,9 +5,9 @@ import CategoryCard from '../../components/CategoryCard';
 import useFetchcat from '../../hooks/useFetchcat';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
+import API_URL from '../../config/ConfigCategory';
 
 const Categories = ({navigation}) => {
-  const API_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
   const {loading, error, data} = useFetchcat(`${API_URL}`);
 
   const handleCategorySelect = name => {

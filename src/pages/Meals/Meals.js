@@ -6,9 +6,9 @@ import MealCard from '../../components/MealCard';
 
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
+import API_URL from '../../config/ConfigMeals';
 
 const Meals = ({route, navigation}) => {
-  const API_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c';
   const {name} = route.params;
   const {loading, error, data} = useFetch(`${API_URL}=${name}`);
   const goToDetail = idMeal => {
